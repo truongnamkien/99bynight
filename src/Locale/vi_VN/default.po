@@ -1,0 +1,945 @@
+msgid "%s: Getting content length is not supported."
+msgstr "%s: Dung lượng file vượt quá giới hạn cho phép."
+
+msgid "%s: No files were uploaded."
+msgstr "%s: Chưa chọn file upload."
+
+msgid "%s: Cannot upload file."
+msgstr "%s: Không thể upload file."
+
+msgid "%s: File is empty."
+msgstr "%s: File rỗng."
+
+msgid "%s: Please select file to upload."
+msgstr "%s: Vui lòng chọn file để upload."
+
+msgid "%s: File is too large."
+msgstr "%s: Dung lượng file vượt quá giới hạn cho phép."
+
+msgid "%s: File has an invalid extension, it should be one of %s"
+msgstr "%s: Định dạng file không phù hợp, định dạng yêu cầu là %s"
+
+msgid "Destination path does not exist"
+msgstr "Folder chứa file upload không tồn tại"
+
+msgid "Could not save uploaded file. The upload was cancelled, or server error encountered."
+msgstr "Có lỗi xảy ra. Không thể upload file."
+
+msgid "Could not move uploaded file."
+msgstr "Không thể chuyển file."
+
+msgid "File does not exist."
+msgstr "File không tồn tại."
+
+msgid "Data cannot found."
+msgstr "Không tìm thấy dữ liệu."
+
+msgid "The data has been saved."
+msgstr "Dữ liệu đã được cập nhật."
+
+msgid "The data could not be saved. Please, try again."
+msgstr "Dữ liệu không thể cập nhật. Vui lòng thử lại."
+
+msgid "Please upload "
+msgstr "Vui lòng upload "
+
+msgid "The data has been deleted."
+msgstr "Dữ liệu đã được xóa."
+
+msgid "You do not have permission for this feature."
+msgstr "Bạn không có quyền truy cập tính năng này."
+
+msgid "There is only 1 item in the list. Cannot move!"
+msgstr "Danh sách hiện chỉ có 1 item. Không thể cập nhật thứ tự!"
+
+msgid "Minimum width is "
+msgstr "Chiều dài tối thiểu là "
+
+msgid "Minimum height is "
+msgstr "Chiều cao tối thiểu là "
+
+msgid "Photo size must be "
+msgstr "Kích thước hình là "
+
+msgid "On"
+msgstr "Bật"
+
+msgid "Off"
+msgstr "Tắt"
+
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+msgid "The Confirm Password does not match with the Password."
+msgstr "Xác nhận Mật khẩu chưa trùng khớp với Mật khẩu."
+
+msgid "Active"
+msgstr "Hoạt động"
+
+msgid "active"
+msgstr "Hoạt động"
+
+msgid "Temporary Locked"
+msgstr "Tạm khóa"
+
+msgid "Suspended"
+msgstr "Khóa"
+
+msgid "Choose file"
+msgstr "Chọn file"
+
+msgid "Min Width: "
+msgstr "Chiều dài tối thiểu: "
+
+msgid "Min Height: "
+msgstr "Chiều cao tối thiểu: "
+
+msgid "Common Fields"
+msgstr "Thông tin"
+
+msgid "Submit"
+msgstr "Cập nhật"
+
+msgid "Are you sure?"
+msgstr "Bạn có chắc chưa?"
+
+msgid "SEO Keyword"
+msgstr "Từ khóa SEO"
+
+msgid "Add"
+msgstr "Thêm"
+
+msgid "Add New"
+msgstr "Thêm mới"
+
+msgid "List"
+msgstr "Danh sách"
+
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+msgid "View"
+msgstr "Xem"
+
+msgid "View"
+msgstr "Xem"
+
+msgid "Move"
+msgstr "Di chuyển"
+
+msgid "Delete"
+msgstr "Xóa"
+
+msgid "Keyword"
+msgstr "Từ khóa"
+
+msgid "Description"
+msgstr "Mô tả"
+
+msgid "Empty Data"
+msgstr "Không có dữ liệu"
+
+msgid "Actions"
+msgstr "Tùy chỉnh"
+
+msgid "Previous"
+msgstr "Trước"
+
+msgid "Prev"
+msgstr "Trước"
+
+msgid "Next"
+msgstr "Tiếp theo"
+
+msgid "Current Item"
+msgstr "Item hiện tại"
+
+msgid "Position"
+msgstr "Vị trí"
+
+msgid "position"
+msgstr "Vị trí"
+
+msgid "Before"
+msgstr "Trước"
+
+msgid "After"
+msgstr "Sau"
+
+msgid "Item"
+msgstr "Item"
+
+msgid "Remove"
+msgstr "Xóa"
+
+msgid "Please choose coordinate for Google Map"
+msgstr "Vui lòng đánh dấu tọa độ cho Google Map"
+
+msgid "Notice"
+msgstr "Thông báo"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Profile"
+msgstr "Tài khoản"
+
+msgid "Logout"
+msgstr "Thoát"
+
+msgid "Click Here"
+msgstr "Nhấn vào đây"
+
+msgid "Click Here To Download"
+msgstr "Nhấn vào đây để download"
+
+msgid "year"
+msgstr "năm"
+
+msgid "years"
+msgstr "năm"
+
+msgid "month"
+msgstr "tháng"
+
+msgid "months"
+msgstr "tháng"
+
+msgid "day"
+msgstr "ngày"
+
+msgid "days"
+msgstr "ngày"
+
+msgid "minute"
+msgstr "phút"
+
+msgid "minutes"
+msgstr "phút"
+
+msgid "second"
+msgstr "giây"
+
+msgid "seconds"
+msgstr "giây"
+
+msgid "ago"
+msgstr "trước"
+
+msgid "Are you sure you want to delete {0}?"
+msgstr "Bạn có chắc chắn muốn xóa {0}?"
+
+msgid "Login"
+msgstr "Đăng nhập"
+
+msgid "Password"
+msgstr "Mật khẩu"
+
+msgid "Confirm Password"
+msgstr "Xác nhận Mật khẩu"
+
+msgid "Admin Management"
+msgstr "Quản lý Admin"
+
+msgid "Dashboards"
+msgstr "Trang Quản lý"
+
+msgid "Admin Roles"
+msgstr "Nhóm Admin"
+
+msgid "Role"
+msgstr "Nhóm"
+
+msgid "Admin Users"
+msgstr "Admin"
+
+msgid "Content Management"
+msgstr "Quản lý Nội dung"
+
+msgid "Banners"
+msgstr "Banner"
+
+msgid "Banner"
+msgstr "Banner"
+
+msgid "Configs"
+msgstr "Cấu hình"
+
+msgid "Config"
+msgstr "Cấu hình"
+
+msgid "User Management"
+msgstr "Quản lý Người dùng"
+
+msgid "Contacts"
+msgstr "Liên hệ"
+
+msgid "Contact"
+msgstr "Liên hệ"
+
+msgid "Subscribes"
+msgstr "Đăng ký"
+
+msgid "Subscribe"
+msgstr "Đăng ký"
+
+msgid "Cannot edit Supper Admin!"
+msgstr "Không thể thay đổi Super Admin!"
+
+msgid "Cannot change permission for Supper Admin."
+msgstr "Không thể phân quyền cho Super Admin"
+
+msgid "The permission has been saved."
+msgstr "Phân quyền đã được cập nhật"
+
+msgid "Login has been temporarily disabled due to too many unsuccessful login attempts. Please try again after 15 minutes."
+msgstr "Đăng nhập bị tạm khóa do sai mật khẩu quá nhiều lần. Vui lòng thử lại sau 15 phút"
+
+msgid "You account is not allowed to login."
+msgstr "Tài khoản bị khóa."
+
+msgid "Invalid email or password. Please try again"
+msgstr "Sai email hoặc mật khẩu. Vui lòng thử lại."
+
+msgid "All Configs have been set. Cannot add more!"
+msgstr "Tất cả cấu hình đã được khai báo. Không thể bổ sung thêm!"
+
+msgid "Role Name"
+msgstr "Tên Nhóm"
+
+msgid "status"
+msgstr "Trạng thái"
+
+msgid "Status"
+msgstr "Trạng thái"
+
+msgid "Search"
+msgstr "Tìm kiếm"
+
+msgid "Password"
+msgstr "Mật khẩu"
+
+msgid "Password Confirm"
+msgstr "Xác nhận mật khẩu"
+
+msgid "Title"
+msgstr "Tiêu đề"
+
+msgid "title"
+msgstr "tiêu đề"
+
+msgid "Description limit is 50 characters"
+msgstr "Giới hạn độ dài cho Mô tả là 50 ký tự"
+
+msgid "Content"
+msgstr "Nội dung"
+
+msgid "content"
+msgstr "Nội dung"
+
+msgid "Value"
+msgstr "Giá trị"
+
+msgid "Phone"
+msgstr "Số điện thoại"
+
+msgid "Please input Title."
+msgstr "Vui lòng nhập Tiêu đề"
+
+msgid "Fullname"
+msgstr "Họ và tên"
+
+msgid "Thanks for subscribing!"
+msgstr "Cảm ơn bạn đã đăng ký!"
+
+msgid "The value must be a valid email."
+msgstr "Giá trị nhập vào phải là email."
+
+msgid "Email for mail system"
+msgstr "Email dành cho hệ thống mail"
+
+msgid "Password for mail system"
+msgstr "Mật khẩu dành cho hệ thống mail"
+
+msgid "inactive"
+msgstr "Khóa"
+
+msgid "Inactive"
+msgstr "Khóa"
+
+msgid "Pending"
+msgstr "Đang chờ duyệt"
+
+msgid "Reject"
+msgstr "Từ chối"
+
+msgid "Unverified"
+msgstr "Chưa xác nhận"
+
+msgid "Locked"
+msgstr "Khóa"
+
+msgid "Thanks for your information!"
+msgstr "Cảm ơn thông tin của bạn!"
+
+msgid "Yes"
+msgstr "Có"
+
+msgid "No"
+msgstr "Không"
+
+msgid "Read More"
+msgstr "Xem thêm"
+
+msgid "Jan"
+msgstr "Tháng 1"
+
+msgid "Feb"
+msgstr "Tháng 2"
+
+msgid "Mar"
+msgstr "Tháng 3"
+
+msgid "Apr"
+msgstr "Tháng 4"
+
+msgid "May"
+msgstr "Tháng 5"
+
+msgid "Jun"
+msgstr "Tháng 6"
+
+msgid "Jul"
+msgstr "Tháng 7"
+
+msgid "Aug"
+msgstr "Tháng 8"
+
+msgid "Sep"
+msgstr "Tháng 9"
+
+msgid "Oct"
+msgstr "Tháng 10"
+
+msgid "Nov"
+msgstr "Tháng 11"
+
+msgid "Dec"
+msgstr "Tháng 12"
+
+msgid "Close"
+msgstr "Đóng"
+
+msgid "Home"
+msgstr "Trang chủ"
+
+msgid "Choose"
+msgstr "Chọn"
+
+msgid "Address"
+msgstr "Địa chỉ"
+
+msgid "Current Thumbnail"
+msgstr "Thumbnail Hiện tại"
+
+msgid "We will contact you soon!"
+msgstr "Chúng tôi sẽ sớm liên hệ!"
+
+msgid "Map Location"
+msgstr "Vị trí bản đồ"
+
+msgid "Location"
+msgstr "Vị trí"
+
+msgid "Web Description"
+msgstr "Mô tả web"
+
+msgid "Web Keyword"
+msgstr "Từ khóa SEO cho web"
+
+msgid "Copyright © %s %s."
+msgstr "Bản quyền © %s %s."
+
+msgid "Share"
+msgstr "Chia sẻ"
+
+msgid "Your Email (*)"
+msgstr "Email của bạn (*)"
+
+msgid "Your Name (*)"
+msgstr "Tên của bạn (*)"
+
+msgid "Your Phone (*)"
+msgstr "Số điện thoại của bạn (*)"
+
+msgid "Your Message (*)"
+msgstr "Tin nhắn của bạn (*)"
+
+msgid "Send message"
+msgstr "Gửi tin nhắn"
+
+msgid "Page Not Found!"
+msgstr "Không tìm thấy nội dung!"
+
+msgid "Sorry, We could not find the content you were looking for."
+msgstr "Xin lỗi, nội dung bạn cần tìm không tồn tại."
+
+msgid "Blogs"
+msgstr "Tin tức"
+
+msgid "Blog"
+msgstr "Tin tức"
+
+msgid "blogs"
+msgstr "Tin tức"
+
+msgid "blog"
+msgstr "Tin tức"
+
+msgid "Read more"
+msgstr "Xem thêm"
+
+msgid "The list is empty."
+msgstr "Chưa có nội dung."
+
+msgid "Blog Categories"
+msgstr "Chuyên mục"
+
+msgid "Blog Category"
+msgstr "Chuyên mục"
+
+msgid "Latest Posts"
+msgstr "Bài viết mới"
+
+msgid "Useful Info"
+msgstr "Thông Tin Hữu Ích"
+
+msgid "Useful <span class='highlight regular'>Info</span>"
+msgstr "<span class='highlight regular'>Thông Tin</span> Hữu Ích"
+
+msgid "Useful <span class='highlight regular'>News</span>"
+msgstr "<span class='highlight regular'>Tin Tức</span> Mới"
+
+msgid "Contact <span class="highlight regular">Info</span>"
+msgstr "Thông tin <span class='highlight regular'>Liên Hệ</span>"
+
+msgid "<span class='highlight regular'>Book</span> Collection"
+msgstr "Tủ <span class='highlight regular'>Sách</span>"
+
+msgid "Blogs Management"
+msgstr "Quản lý Tin tức"
+
+msgid "Page Categories"
+msgstr "Danh mục Thông tin"
+
+msgid "Pages"
+msgstr "Các trang Thông tin"
+
+msgid "Not select"
+msgstr "Không chọn"
+
+msgid "Parent Category"
+msgstr "Danh mục Cấp Cha"
+
+msgid "Please input Category Title."
+msgstr "Vui lòng nhập tên Danh mục"
+
+msgid "Category Title limit is 60 characters"
+msgstr "Tên Danh mục không thể vượt quá 60 ký tự"
+
+msgid "Please input Page Title."
+msgstr "Vui lòng nhập Tiêu đề Trang"
+
+msgid "Page Title limit is 60 characters"
+msgstr "Tiêu đề Trang không thể vượt quá 60 ký tự"
+
+msgid "Category"
+msgstr "Danh mục"
+
+msgid "Page Category"
+msgstr "Danh mục Trang"
+
+msgid "parent_category"
+msgstr "Danh mục Cấp Cha"
+
+msgid "page_category"
+msgstr "Danh mục Cấp Cha"
+
+msgid "previous_item"
+msgstr "Item trước"
+
+msgid "next_item"
+msgstr "Item sau"
+
+msgid "Please input Blog Category Title."
+msgstr "Vui lòng nhập Tên Chuyên Mục."
+
+msgid "Featured"
+msgstr "Quan trọng"
+
+msgid "featured"
+msgstr "Quan trọng"
+
+msgid "Publish Date"
+msgstr "Ngày đăng"
+
+msgid "published_date"
+msgstr "Ngày đăng"
+
+msgid "Please input Blog Title."
+msgstr "Vui lòng nhập Tiêu đề."
+
+msgid "blog_category"
+msgstr "Chuyên mục"
+
+msgid "Back to Home"
+msgstr "Quay về Trang chủ"
+
+msgid "Please input Publisher Name."
+msgstr "Vui lòng nhập tên Nhà xuất bản."
+
+msgid "Publishers"
+msgstr "Nhà xuất bản"
+
+msgid "Book Publishers"
+msgstr "Nhà xuất bản"
+
+msgid "Categories"
+msgstr "Danh mục"
+
+msgid "Books Management"
+msgstr "Quản lý Phát hành sách"
+
+msgid "Authors"
+msgstr "Tác giả"
+
+msgid "Translators"
+msgstr "Dịch giả"
+
+msgid "Translator"
+msgstr "Dịch giả"
+
+msgid "Please input Book Title."
+msgstr "Vui lòng nhập Tiêu đề Sách."
+
+msgid "Please input Collection Name."
+msgstr "Vui lòng nhập Tên Tủ sách."
+
+msgid "Book Collections"
+msgstr "Tủ sách"
+
+msgid "Book Collection"
+msgstr "Tủ sách"
+
+msgid "Author Name"
+msgstr "Tên tác giả"
+
+msgid "Translator Name"
+msgstr "Tên dịch giả"
+
+msgid "Price"
+msgstr "Giá"
+
+msgid "Price Off"
+msgstr "Giá khuyến mãi"
+
+msgid "Publishing"
+msgstr "Xuất bản"
+
+msgid "Publisher"
+msgstr "Nhà xuất bản"
+
+msgid "Author"
+msgstr "Tác giả"
+
+msgid "All"
+msgstr "Tất cả"
+
+msgid "Keyword Management"
+msgstr "Quản lý Thông tin Tra cứu"
+
+msgid "Vocabulary"
+msgstr "Từ vựng"
+
+msgid "Books"
+msgstr "Sách"
+
+msgid "Lookup"
+msgstr "Tra cứu"
+
+msgid "Select"
+msgstr "Chọn"
+
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+msgid "Cannot find any result!"
+msgstr "Không có nội dung cần tìm!"
+
+msgid "All Languages"
+msgstr "Tất cả Ngôn ngữ"
+
+msgid "Searching result for keyword"
+msgstr "Kết quả tìm kiếm của từ khóa"
+
+msgid "Other similar results for keyword"
+msgstr "Các kết quả tương tự cho từ khóa"
+
+msgid "Buddhist Dictionary"
+msgstr "Từ điển Phật học"
+
+msgid "Keywords"
+msgstr "Từ điển Phật học"
+
+msgid "Excel file is not in correct format!"
+msgstr "File Excel không đúng format!"
+
+msgid "These words have been added to different lines before."
+msgstr "Những từ này đã được nhập vào những dòng khác nhau trước đây."
+
+msgid "Sign in"
+msgstr "Đăng nhập"
+
+msgid "Enter your credentials to access your account."
+msgstr "Điền thông tin để đăng nhập tài khoản của bạn."
+
+msgid "Please input %s!"
+msgstr "Vui lòng nhập %s!"
+
+msgid "Please select a %s!"
+msgstr "Vui lòng chọn %s!"
+
+msgid "This %s has been used!"
+msgstr "%s này đã được sử dụng!"
+
+msgid "User information"
+msgstr "Thông tin Người dùng"
+
+msgid "Profile"
+msgstr "Thông tin cá nhân"
+
+msgid "Edit profile"
+msgstr "Cập nhật Thông tin cá nhân"
+
+msgid "Current Password"
+msgstr "Mật khẩu Hiện tại"
+
+msgid "New Password"
+msgstr "Mật khẩu Mới"
+
+msgid "Filter"
+msgstr "Bộ Lọc"
+
+msgid "Main Info"
+msgstr "Thông tin chính"
+
+msgid "Update"
+msgstr "Cập nhật"
+
+msgid "Detail"
+msgstr "Chi tiết"
+
+msgid "Forgot password?"
+msgstr "Quên mật khẩu?"
+
+msgid "Enter your email to reset your password."
+msgstr "Nhập email để khôi phục mật khẩu."
+
+msgid "Send"
+msgstr "Gửi"
+
+msgid "Back"
+msgstr "Quay lại"
+
+msgid "Account not found!"
+msgstr "Tài khoản không tồn tại!"
+
+msgid "You recently initiated a password reset for your %s account."
+msgstr "Bạn vừa gửi yêu cầu khôi phục mật khẩu cho tài khoản %s."
+
+msgid "To complete the process, please click <a href="%s" target="_blank">HERE</a>."
+msgstr "Để khôi phục mật khẩu, vui lòng click vào <a href="%s" target="_blank">ĐÂY</a>."
+
+msgid "Reset Password"
+msgstr "Khôi phục Mật khẩu"
+
+msgid "Your Profile has been updated!"
+msgstr "Thông tin cá nhân đã được cập nhật!"
+
+msgid "Please check your email for next step!"
+msgstr "Vui lòng kiểm tra email để tiếp tục!"
+
+msgid "The link is incorrect or expired."
+msgstr "Link không chính xác hoặc đã hết hạn."
+
+msgid "Invalid email or password!"
+msgstr "Email hoặc Mật khẩu không chính xác!"
+
+msgid "Your account will be locked after %s more tries!"
+msgstr "Tài khoản của bạn sẽ bị khóa sau %s lần thử nữa!"
+
+msgid "Your Current Password is incorrect!"
+msgstr "Mật khẩu hiện tại không chính xác!"
+
+msgid "Permissions"
+msgstr "Phân quyền"
+
+msgid "Permission"
+msgstr "Phân quyền"
+
+msgid "Cannot edit yourself!"
+msgstr "Không thể thay chỉnh sửa bản thân!"
+
+msgid "Multi Language Content"
+msgstr "Nội dung đa ngôn ngữ"
+
+msgid "%s limit is %validationValue% characters!"
+msgstr "Độ dài tối đa cho %s là %validationValue% ký tự!"
+
+msgid "Change Display Order"
+msgstr "Thay đổi Thứ tự Hiển thị"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "ImportExcel"
+msgstr "Upload File"
+
+msgid "Please update at least a language!"
+msgstr "Vui lòng cập nhật cho ít nhất một ngôn ngữ!"
+
+msgid "Please upload %s!"
+msgstr "Vui lòng upload %s!"
+
+msgid "Other translations"
+msgstr "Các bản dịch khác"
+
+msgid "Contact Info"
+msgstr "Liên Hệ"
+
+msgid "Font Size"
+msgstr "Cỡ Chữ"
+
+msgid "other"
+msgstr "khác"
+
+msgid "Not Select"
+msgstr "Không chọn"
+
+msgid "Introduction"
+msgstr "Giới thiệu"
+
+msgid "Working Time"
+msgstr "Giờ Khám"
+
+msgid "Working Time (Mon - Fri)"
+msgstr "Giờ Khám (T2 - T6)"
+
+msgid "Working Time (Sat)"
+msgstr "Giờ Khám (T7)"
+
+msgid "Working Time (Sun)"
+msgstr "Giờ Khám (CN)"
+
+msgid "Mon - Fri"
+msgstr "T2 - T6"
+
+msgid "Sat"
+msgstr "T7"
+
+msgid "Sun"
+msgstr "CN"
+
+msgid "Service"
+msgstr "Dịch vụ"
+
+msgid "Services"
+msgstr "Dịch vụ"
+
+msgid "SpecialistCategories"
+msgstr "Chuyên khoa"
+
+msgid "Specialist Categories"
+msgstr "Chuyên khoa"
+
+msgid "Specialists"
+msgstr "Khám Chuyên khoa"
+
+msgid "Specialist"
+msgstr "Khám Chuyên khoa"
+
+msgid "Health Cares"
+msgstr "Kiểm tra Sức khỏe"
+
+msgid "HealthCares"
+msgstr "Kiểm tra Sức khỏe"
+
+msgid "HealthCare Category"
+msgstr "Hạng mục Kiểm tra"
+
+msgid "Health Care Categories"
+msgstr "Hạng mục Kiểm tra"
+
+msgid "HealthCareCategories"
+msgstr "Hạng mục Kiểm tra"
+
+msgid "HealthCare Packages"
+msgstr "Gói Kiểm tra Sức khỏe"
+
+msgid "Health Care Packages"
+msgstr "Gói Kiểm tra Sức khỏe"
+
+msgid "HealthCarePackages"
+msgstr "Gói Kiểm tra Sức khỏe"
+
+msgid "Blog Management"
+msgstr "Quản lý Tin tức"
+
+msgid "Service Management"
+msgstr "Quản lý Dịch vụ"
+
+msgid "Blogs.status"
+msgstr "Trạng thái"
+
+msgid "BlogCategories.status"
+msgstr "Trạng thái"
+
+msgid "Banners.status"
+msgstr "Trạng thái"
+
+msgid "Banners.position"
+msgstr "Vị trí"
+
+msgid "AdminUsers.status"
+msgstr "Trạng thái"
+
+msgid "AdminUsers.admin_role_id"
+msgstr "Nhóm Admin"
+
+msgid "AdminRoles.status"
+msgstr "Trạng thái"
+
+msgid "SpecialistCategories.status"
+msgstr "Trạng thái"
+
+msgid "Specialists.status"
+msgstr "Trạng thái"
+
+msgid "HealthCareCategories.status"
+msgstr "Trạng thái"
+
+msgid "HealthCarePackages.status"
+msgstr "Trạng thái"
+
+msgid "HealthCares.status"
+msgstr "Trạng thái"
+
+msgid "Services.status"
+msgstr "Trạng thái"
+
+msgid "Pages.status"
+msgstr "Trạng thái"
+
+msgid ""
+msgstr ""
+
