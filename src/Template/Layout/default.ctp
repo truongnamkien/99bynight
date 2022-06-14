@@ -35,49 +35,65 @@
         <link rel="icon" href="<?php echo $favicon; ?>" type="image/x-icon" />
         <link rel="shortcut icon" href="<?= $favicon; ?>" type="image/x-icon" />
         <?= $this->Minify->css('css/default') ?>
-        <?= $this->Minify->css('html/vendor/slick/slick') ?>
-        <?= $this->Minify->css('html/vendor/animate/animate') ?>
-        <?= $this->Minify->css('html/icons/style') ?>
-        <?= $this->Minify->css('html/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker') ?>
-        <?= $this->Minify->css('html/css/style-color-3') ?>
+
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <?= $this->Minify->css('html/vendor/bootstrap/css/bootstrap') ?>
+        <?= $this->Minify->css('html/vendor/font-awesome/css/font-awesome') ?>
+        <?= $this->Minify->css('html/vendor/animate') ?>
+        <?= $this->Minify->css('html/vendor/nivo-lightbox/nivo-lightbox') ?>
+        <?= $this->Minify->css('html/vendor/nivo-lightbox/themes/default/default') ?>
+        <?= $this->Minify->css('html/css/styles') ?>
         <?= $this->Minify->fetchCss() ?>
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
         <script type="text/javascript">
             var contextUrl = '<?php echo $this->Url->build('/', true); ?>';
             var siteTitle = '<?php echo PAGE_TITLE; ?>';
             var alertContent = '<?php echo (!empty($alertContent) ? $alertContent : ''); ?>';
         </script>
     </head>
-    <body class="shop-page">
-        <?php echo $this->Content->pageHeader((!empty($currentPage) ? $currentPage : false)); ?>
-        <div class="page-content">
-            <?php echo $this->Content->quickLinkPanel(); ?>
-            <?= $this->fetch('content')?>
+    <body class="">
+        <div class="loader-container" id="page-loader">
+            <div class="loading-wrapper loading-wrapper-hide">
+                <div class="loader-animation" id="loader-animation">
+                    <div class="sk-folding-cube">
+                        <div class="sk-cube1 sk-cube"></div>
+                        <div class="sk-cube2 sk-cube"></div>
+                        <div class="sk-cube4 sk-cube"></div>
+                        <div class="sk-cube3 sk-cube"></div>
+                    </div>
+                </div>
+                <!-- Edit With Your Name -->
+                <div class="loader-name" id="loader-name">
+                    <?php echo $this->Html->image('logo.png'); ?>
+                </div>
+                <!-- /Edit With Your Name -->
+            </div>
+        </div>
+        <div class="container">
+            <?php echo $this->Content->pageHeader((!empty($currentPage) ? $currentPage : false)); ?>
+            <section class="main-content">
+                <?= $this->fetch('content')?>
+            </section>
         </div>
         <?php echo $this->Content->pageFooter((!empty($currentPage) ? $currentPage : false)); ?>
         <?php echo $this->element('alert_modal'); ?>
-        
-        <?= $this->Minify->script('html/vendor/jquery/jquery-3.2.1') ?>
-	<?= $this->Minify->script('html/vendor/jquery-migrate/jquery-migrate-3.0.1') ?>
-	<?= $this->Minify->script('html/vendor/cookie/jquery.cookie') ?>
-	<?= $this->Minify->script('html/vendor/bootstrap-datetimepicker/moment') ?>
-	<?= $this->Minify->script('html/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker') ?>
-	<?= $this->Minify->script('html/vendor/popper/popper') ?>
-	<?= $this->Minify->script('html/vendor/bootstrap/bootstrap') ?>
-	<?= $this->Minify->script('html/vendor/waypoints/jquery.waypoints') ?>
-	<?= $this->Minify->script('html/vendor/waypoints/sticky') ?>
-	<?= $this->Minify->script('html/vendor/imagesloaded/imagesloaded.pkgd') ?>
-	<?= $this->Minify->script('html/vendor/slick/slick') ?>
-	<?= $this->Minify->script('html/vendor/scroll-with-ease/jquery.scroll-with-ease') ?>
-	<?= $this->Minify->script('html/vendor/countTo/jquery.countTo') ?>
-	<?= $this->Minify->script('html/vendor/form-validation/jquery.form') ?>
-	<?= $this->Minify->script('html/vendor/form-validation/jquery.validate') ?>
-	<?= $this->Minify->script('html/vendor/isotope/isotope.pkgd') ?>
-	<!-- Custom Scripts -->
-	<?= $this->Minify->script('html/js/app') ?>
-	<?= $this->Minify->script('html/js/app-shop') ?>
-	<?= $this->Minify->script('html/form/forms') ?>
+
+        <?= $this->Minify->script('html/vendor/jquery') ?>
+        <?= $this->Minify->script('html/vendor/bootstrap/js/bootstrap') ?>
+        <?= $this->Minify->script('html/vendor/validate') ?>
+        <?= $this->Minify->script('html/vendor/nivo-lightbox/nivo-lightbox') ?>
+        <?= $this->Minify->script('html/vendor/jquery.nicescroll') ?>
+        <?= $this->Minify->script('html/vendor/jquery.nicescroll.plus') ?>
+        <?= $this->Minify->script('html/vendor/jquery.countdown') ?>
+        <?= $this->Minify->script('html/vendor/imagesloaded.pkgd') ?>
+        <?= $this->Minify->script('html/vendor/masonry.pkgd') ?>
+        <?= $this->Minify->script('html/vendor/jquery.ba-bbq') ?>
+        <?= $this->Minify->script('html/vendor/jquery.isotope2') ?>
+        <?= $this->Minify->script('html/vendor/packery-mode.pkgd') ?>
+        <?= $this->Minify->script('html/vendor/cross-browser') ?>
+        <?= $this->Minify->script('html/vendor/doubletaptogo') ?>
+        <?= $this->Minify->script('html/vendor/cross-browser') ?>
+        <?= $this->Minify->script('html/js/main') ?>
         <?= $this->Minify->script('js/async_request', true) ?>
         <?= $this->Minify->script('js/common', true) ?>
         <?= $this->Minify->fetchJs() ?>

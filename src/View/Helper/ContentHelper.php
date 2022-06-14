@@ -16,8 +16,6 @@ class ContentHelper extends Helper {
     const FEATURED_BLOGS_PER_LIST = 3;
 
     protected static $pageList = [];
-    protected static $specialistCategories = [];
-    protected static $healthCarePackages = [];
     protected static $blogCategories = [];
     public $helpers = ['Url'];
 
@@ -187,7 +185,7 @@ class ContentHelper extends Helper {
                 'BlogCategories',
             ],
             'conditions' => [
-                    [
+                [
                     'OR' => [
                         'BlogCategories.status' => ACTIVE,
                         'BlogCategories.id IS NULL',
@@ -227,7 +225,7 @@ class ContentHelper extends Helper {
                 'Thumbnails',
             ],
             'conditions' => [
-                    [
+                [
                     'OR' => [
                         'BlogCategories.status' => ACTIVE,
                         'BlogCategories.id IS NULL',
@@ -258,7 +256,7 @@ class ContentHelper extends Helper {
         Utils::useComponents($this, ['Backend.MultiLanguage']);
         $currentLanguage = $this->MultiLanguage->getCurrentLanguage();
         $conditions = [
-                [
+            [
                 'OR' => [
                     'BlogCategories.status' => ACTIVE,
                     'BlogCategories.id IS NULL',
@@ -360,132 +358,6 @@ class ContentHelper extends Helper {
         return $html;
     }
 
-    public function serviceListHeader($currentPage = false) {
-        Utils::useTables($this, ['Services']);
-        Utils::useComponents($this, ['Backend.MultiLanguage']);
-        $currentLanguage = $this->MultiLanguage->getCurrentLanguage();
-        $serviceList = $this->Services->find('all', [
-                    'contain' => [
-                        'Title' . ucfirst($currentLanguage),
-                    ],
-                    'conditions' => [
-                        'Services.status' => ACTIVE,
-                    ],
-                    'order' => [
-                        'Services.display_order' => 'asc',
-                    ],
-                ])->toArray();
-        if (empty($serviceList)) {
-            return false;
-        }
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $view->set('serviceList', $serviceList);
-        $view->set('currentPage', $currentPage);
-        $html = $view->render('/Element/Services/service_list_header');
-        return $html;
-    }
-
-    public function specialistListHeader($currentPage = false) {
-        $categoryList = $this->_getSpecialistCategoryList();
-        if (empty($categoryList)) {
-            return false;
-        }
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $view->set('categoryList', $categoryList);
-        $view->set('currentPage', $currentPage);
-        $html = $view->render('/Element/Specialists/category_list_header');
-        return $html;
-    }
-
-    public function specialistCategoryContent($currentPage = false) {
-        $categoryList = $this->_getSpecialistCategoryList();
-        if (empty($categoryList)) {
-            return false;
-        }
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $view->set('categoryList', $categoryList);
-        $view->set('currentPage', $currentPage);
-        $html = $view->render('/Element/Specialists/category_list_sidebar');
-        return $html;
-    }
-
-    private function _getSpecialistCategoryList() {
-        if (empty(self::$specialistCategories)) {
-            Utils::useTables($this, ['SpecialistCategories']);
-            Utils::useComponents($this, ['Backend.MultiLanguage']);
-            $currentLanguage = $this->MultiLanguage->getCurrentLanguage();
-            $categoryList = $this->SpecialistCategories->find('all', [
-                        'contain' => [
-                            'Title' . ucfirst($currentLanguage),
-                        ],
-                        'conditions' => [
-                            'SpecialistCategories.status' => ACTIVE,
-                        ],
-                        'order' => [
-                            'SpecialistCategories.display_order' => 'asc',
-                        ],
-                    ])->toArray();
-            if (empty($categoryList)) {
-                return [];
-            }
-            self::$specialistCategories = $categoryList;
-        }
-        return self::$specialistCategories;
-    }
-
-    public function healthcareListHeader($currentPage = false) {
-        $packageList = $this->_getHealthCarePackageList();
-        if (empty($packageList)) {
-            return false;
-        }
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $view->set('packageList', $packageList);
-        $view->set('currentPage', $currentPage);
-        $html = $view->render('/Element/HealthCares/category_list_header');
-        return $html;
-    }
-
-    public function healthcareCategoryContent($currentPage = false) {
-        $packageList = $this->_getHealthCarePackageList();
-        if (empty($packageList)) {
-            return false;
-        }
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $view->set('packageList', $packageList);
-        $view->set('currentPage', $currentPage);
-        $html = $view->render('/Element/HealthCares/category_list_sidebar');
-        return $html;
-    }
-
-    private function _getHealthCarePackageList() {
-        if (empty(self::$healthCarePackages)) {
-            Utils::useTables($this, ['HealthCarePackages']);
-            Utils::useComponents($this, ['Backend.MultiLanguage']);
-            $currentLanguage = $this->MultiLanguage->getCurrentLanguage();
-            $packageList = $this->HealthCarePackages->find('all', [
-                        'contain' => [
-                            'Title' . ucfirst($currentLanguage),
-                        ],
-                        'conditions' => [
-                            'HealthCarePackages.status' => ACTIVE,
-                        ],
-                        'order' => [
-                            'HealthCarePackages.display_order' => 'asc',
-                        ],
-                    ])->toArray();
-            if (empty($packageList)) {
-                return [];
-            }
-            self::$healthCarePackages = $packageList;
-        }
-        return self::$healthCarePackages;
-    }
-
     public function workingContactPanel() {
         $view = new \Cake\View\View();
         $view->setLayout(false);
@@ -494,82 +366,6 @@ class ContentHelper extends Helper {
         $languaCode = $this->MultiLanguage->getCurrentLanguageCode();
         $view->set('currentLangCode', $languaCode);
         $html = $view->render('/Element/working_hours');
-        return $html;
-    }
-
-    public function quickLinkPanel() {
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $this->_setConfig($view);
-        Utils::useComponents($this, ['Backend.MultiLanguage']);
-        $languaCode = $this->MultiLanguage->getCurrentLanguageCode();
-        $view->set('currentLangCode', $languaCode);
-        $html = $view->render('/Element/quicklink');
-        return $html;
-    }
-
-    public function healthCarePackageComparision() {
-        $view = new \Cake\View\View();
-        $view->setLayout(false);
-        $this->_setConfig($view);
-        Utils::useComponents($this, ['Backend.MultiLanguage']);
-        $languaCode = $this->MultiLanguage->getCurrentLanguageCode();
-        $currentLanguage = $this->MultiLanguage->getCurrentLanguage();
-        $view->set('currentLangCode', $languaCode);
-        Utils::useTables($this, ['HealthCareCategories', 'HealthCarePackages']);
-        $packageList = $this->HealthCarePackages->find('all', [
-                    'contain' => [
-                        'Title' . ucfirst($currentLanguage),
-                    ],
-                    'conditions' => [
-                        'HealthCarePackages.status' => ACTIVE,
-                    ],
-                    'order' => [
-                        'HealthCarePackages.display_order' => 'asc',
-                    ],
-                ])->toArray();
-        $parsedPackageList = [];
-        $packageChecklist = [];
-        foreach ($packageList as $package) {
-            $packageChecklist[$package->id] = false;
-            $parsedPackageList[$package->id] = $package;
-        }
-        $view->set('packageList', $parsedPackageList);
-
-        Utils::useTables($this, [
-            'HealthCares',
-        ]);
-        $healthcareList = $this->HealthCares->find('all', [
-                    'contain' => [
-                        'Title' . ucfirst($currentLanguage),
-                        'Thumbnails',
-                        'HealthCarePackages',
-                        'HealthCareCategories',
-                    ],
-                    'conditions' => [
-                        'HealthCares.status' => ACTIVE,
-                    ],
-                    'order' => [
-                        'HealthCareCategories.display_order' => 'asc',
-                        'HealthCares.display_order' => 'asc',
-                    ],
-                ])->toArray();
-        $categoryList = [];
-        foreach ($healthcareList as $healthcare) {
-            if (empty($categoryList[$healthcare->category_id])) {
-                $categoryList[$healthcare->category_id] = $healthcare->health_care_category;
-            }
-            if (empty($categoryList[$healthcare->category_id]->healthList)) {
-                $categoryList[$healthcare->category_id]->healthList = [];
-            }
-            $healthcare->packageChecklist = [];
-            foreach ($healthcare->health_care_packages as $subPackage) {
-                $healthcare->packageChecklist[$subPackage->id] = true;
-            }
-            $categoryList[$healthcare->category_id]->healthList[$healthcare->id] = $healthcare;
-        }
-        $view->set('categoryList', $categoryList);
-        $html = $view->render('/Element/HealthCares/package_comparision');
         return $html;
     }
 
