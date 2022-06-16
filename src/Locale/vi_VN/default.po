@@ -811,9 +811,6 @@ msgstr "Vui lòng cập nhật cho ít nhất một ngôn ngữ!"
 msgid "Please upload %s!"
 msgstr "Vui lòng upload %s!"
 
-msgid "Other translations"
-msgstr "Các bản dịch khác"
-
 msgid "Contact Info"
 msgstr "Liên Hệ"
 
@@ -829,18 +826,6 @@ msgstr "Không chọn"
 msgid "Introduction"
 msgstr "Giới thiệu"
 
-msgid "Working Time"
-msgstr "Giờ Khám"
-
-msgid "Working Time (Mon - Fri)"
-msgstr "Giờ Khám (T2 - T6)"
-
-msgid "Working Time (Sat)"
-msgstr "Giờ Khám (T7)"
-
-msgid "Working Time (Sun)"
-msgstr "Giờ Khám (CN)"
-
 msgid "Mon - Fri"
 msgstr "T2 - T6"
 
@@ -850,53 +835,23 @@ msgstr "T7"
 msgid "Sun"
 msgstr "CN"
 
-msgid "Service"
-msgstr "Dịch vụ"
+msgid "ProductCategories"
+msgstr "Thực đơn"
 
-msgid "Services"
-msgstr "Dịch vụ"
+msgid "Product Categories"
+msgstr "Thực đơn"
 
-msgid "SpecialistCategories"
-msgstr "Chuyên khoa"
+msgid "Products"
+msgstr "Món ăn"
 
-msgid "Specialist Categories"
-msgstr "Chuyên khoa"
+msgid "Product"
+msgstr "Món ăn"
 
-msgid "Specialists"
-msgstr "Khám Chuyên khoa"
-
-msgid "Specialist"
-msgstr "Khám Chuyên khoa"
-
-msgid "Health Cares"
-msgstr "Kiểm tra Sức khỏe"
-
-msgid "HealthCares"
-msgstr "Kiểm tra Sức khỏe"
-
-msgid "HealthCare Category"
-msgstr "Hạng mục Kiểm tra"
-
-msgid "Health Care Categories"
-msgstr "Hạng mục Kiểm tra"
-
-msgid "HealthCareCategories"
-msgstr "Hạng mục Kiểm tra"
-
-msgid "HealthCare Packages"
-msgstr "Gói Kiểm tra Sức khỏe"
-
-msgid "Health Care Packages"
-msgstr "Gói Kiểm tra Sức khỏe"
-
-msgid "HealthCarePackages"
-msgstr "Gói Kiểm tra Sức khỏe"
+msgid "Menu Management"
+msgstr "Quản lý Thực đơn"
 
 msgid "Blog Management"
 msgstr "Quản lý Tin tức"
-
-msgid "Service Management"
-msgstr "Quản lý Dịch vụ"
 
 msgid "Blogs.status"
 msgstr "Trạng thái"
@@ -919,26 +874,23 @@ msgstr "Nhóm Admin"
 msgid "AdminRoles.status"
 msgstr "Trạng thái"
 
-msgid "SpecialistCategories.status"
+msgid "ProductCategories.status"
 msgstr "Trạng thái"
 
-msgid "Specialists.status"
+msgid "Products.status"
 msgstr "Trạng thái"
 
-msgid "HealthCareCategories.status"
-msgstr "Trạng thái"
+msgid ""
+msgstr ""
 
-msgid "HealthCarePackages.status"
-msgstr "Trạng thái"
+msgid ""
+msgstr ""
 
-msgid "HealthCares.status"
-msgstr "Trạng thái"
+msgid ""
+msgstr ""
 
-msgid "Services.status"
-msgstr "Trạng thái"
-
-msgid "Pages.status"
-msgstr "Trạng thái"
+msgid ""
+msgstr ""
 
 msgid ""
 msgstr ""

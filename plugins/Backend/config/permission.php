@@ -55,5 +55,20 @@ return [
                 ],
             ],
         ],
+        [
+            'label' => 'Menu Management',
+            'subModules' => [
+                'ProductCategories' => [
+                    'label' => 'Product Categories',
+                    'iconClass' => 'fas fa-utensils text-orange',
+                    'controller' => 'ProductCategories',
+                ],
+                'Products' => [
+                    'label' => 'Products',
+                    'iconClass' => 'fas fa-burger text-primary',
+                    'controller' => 'Products',
+                ],
+            ],
+        ],
     ],
 ];
