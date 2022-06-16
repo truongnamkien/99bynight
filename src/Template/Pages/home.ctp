@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="restaurant-menu-dots"></div>
                                         <div class="restaurant-menu-price">
-                                            <?php echo !empty($productInfo->price) ? $productInfo->price . 'K' : __('Theo thời giá'); ?>
+                                            <?php echo !empty($productInfo->price) ? $productInfo->price . 'K' : __('Thời giá'); ?>
                                         </div>
                                     </div>
                                     <div class="restaurant-menu-description">
