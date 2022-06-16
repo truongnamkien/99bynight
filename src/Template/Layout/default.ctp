@@ -34,8 +34,8 @@
         <?php $favicon = $this->Url->build(Configure::read('Logo.Favicon'), true); ?>
         <link rel="icon" href="<?php echo $favicon; ?>" type="image/x-icon" />
         <link rel="shortcut icon" href="<?= $favicon; ?>" type="image/x-icon" />
-        <?= $this->Minify->css('css/default') ?>
 
+        <?= $this->Minify->css('css/default') ?>
         <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <?= $this->Minify->css('html/vendor/bootstrap/css/bootstrap') ?>
