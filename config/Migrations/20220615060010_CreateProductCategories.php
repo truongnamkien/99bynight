@@ -12,6 +12,12 @@ class CreateProductCategories extends AbstractMigration {
             'null' => false,
         ]);
         $table->addIndex('status');
+        $table->addColumn('parent_id', 'integer', [
+            'default' => 0,
+            'limit' => 11,
+            'null' => false,
+        ]);
+        $table->addIndex('parent_id');
         $table->addColumn('display_order', 'float', [
             'default' => 0,
             'null' => false,

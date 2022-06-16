@@ -23,6 +23,10 @@ class ProductsController extends CrudController {
                 'notBlank' => 'Please input %s!',
             ],
         ],
+        'description' => [
+            'input' => 'text',
+            'label' => 'Description',
+        ],
     ];
     protected $listViewCols = [
         'product_title_%languageLabel%.content' => [
@@ -46,6 +50,9 @@ class ProductsController extends CrudController {
         ],
         'product_title_%languageLabel%.content' => [
             'label' => 'Title',
+        ],
+        'description_%languageLabel%.content' => [
+            'label' => 'Description',
         ],
         'status' => [
             'label' => 'Status',

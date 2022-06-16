@@ -12,17 +12,13 @@
                         <a href="<?php echo $siteFacebook; ?>" target="blank" class="btn-default btn-wapasha" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
                     </li>
                 <?php endif; ?>
-                <li><a href="#" class="btn-default btn-wapasha" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#" class="btn-default btn-wapasha" data-toggle="tooltip" data-placement="top" title="Behance"><i class="fa fa-behance"></i></a></li>
-                <li><a href="#" class="btn-default btn-wapasha" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
             </ul>
-            <!-- /Social Icons -->
             <p class="footer-quote">
+                <?php echo PAGE_TITLE; ?>
                 <?php if(!empty($siteDescription)): ?>
-                    <?php echo $siteDescription; ?>
                     <br>
+                    <?php echo $siteDescription; ?>
                 <?php endif; ?>
-                <span class="footer-quote-author"><?php echo PAGE_TITLE; ?></span>
             </p>
         </div>
     </div>

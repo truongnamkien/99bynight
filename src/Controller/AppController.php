@@ -23,7 +23,7 @@ use Cake\Event\Event;
 
 class AppController extends CoreController {
 
-    const ALERT_KEY = 'VNCPH:Alert';
+    const ALERT_KEY = 'FrontEnd:Alert';
 
     /**
      * Initialization hook method.

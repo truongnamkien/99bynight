@@ -42,6 +42,15 @@ class ProductsTable extends Table {
                     'Title' . $languageLabel . '.field' => 'title',
                 ]
             ]);
+            $this->hasOne('Description' . $languageLabel, [
+                'className' => 'Backend.LanguageContents',
+                'foreignKey' => 'target_id',
+                'conditions' => [
+                    'Description' . $languageLabel . '.language' => $languageCode,
+                    'Description' . $languageLabel . '.target_type' => 'Products',
+                    'Description' . $languageLabel . '.field' => 'description',
+                ]
+            ]);
         }
     }
 

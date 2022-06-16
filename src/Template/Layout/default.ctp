@@ -70,10 +70,7 @@
             </div>
         </div>
         <div class="container">
-            <?php echo $this->Content->pageHeader((!empty($currentPage) ? $currentPage : false)); ?>
-            <section class="main-content">
-                <?= $this->fetch('content')?>
-            </section>
+            <?= $this->fetch('content')?>
         </div>
         <?php echo $this->Content->pageFooter((!empty($currentPage) ? $currentPage : false)); ?>
         <?php echo $this->element('alert_modal'); ?>

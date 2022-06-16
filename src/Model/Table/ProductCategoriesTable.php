@@ -58,6 +58,27 @@ class ProductCategoriesTable extends Table {
         ];
     }
 
+    public function getTypeList() {
+        return [
+            ProductCategory::TYPE_STARTER => [
+                'label' => __('Khai vị'),
+                'iconClass' => 'success',
+            ],
+            ProductCategory::TYPE_MAIN_COURSE => [
+                'label' => __('Món chính'),
+                'iconClass' => 'success',
+            ],
+            ProductCategory::TYPE_DRINK => [
+                'label' => __('Thức uống'),
+                'iconClass' => 'success',
+            ],
+            ProductCategory::TYPE_OTHER => [
+                'label' => __('Khác'),
+                'iconClass' => 'success',
+            ],
+        ];
+    }
+
     public function delete(EntityInterface $entity, $options = array()) {
         Utils::useTables($this, [
             'Products',

@@ -16,7 +16,6 @@
 
 namespace App\Controller;
 
-use App\Model\Entity\Banner;
 use App\Model\Entity\Config;
 use Cake\Core\Configure;
 use Cake\Event\Event;
@@ -127,27 +126,6 @@ class PagesController extends AppController {
         }
     }
 
-    public function subscribeSubmit() {
-        if (!$this->request->is('ajax')) {
-            return $this->redirectHome();
-        }
-        Utils::useTables($this, ['Subscribes']);
-        Utils::useComponents($this, ['FsCore.AsyncResponse']);
-        $subscribe = $this->Subscribes->subscribe(!empty($this->request->data['email']) ? trim($this->request->data['email']) : false);
-        $errors = $subscribe->errors();
-        if (empty($errors)) {
-            $this->AsyncResponse->run("jQuery('#newsletter input').val('');");
-            $this->AsyncResponse->run('showAlert("' . __('Thanks for subscribing!') . '");');
-        } else {
-            $errorList = [];
-            foreach ($errors as $field => $fieldErrors) {
-                $errorList[$field] = implode('<br />', $fieldErrors);
-            }
-            $this->AsyncResponse->run('showAlert("' . array_shift($errorList) . '");');
-        }
-        $this->sendAsyncResponse();
-    }
-
     public function contactSubmit() {
         if (!$this->request->is('ajax')) {
             return $this->redirect('/');
@@ -184,6 +162,40 @@ class PagesController extends AppController {
         $this->pageTitle = __('Home');
         $this->set('bodyClass', 'home page');
         $this->set('currentPage', 'home');
+
+        Utils::useComponents($this, ['Backend.MultiLanguage']);
+        Utils::useTables($this, [
+            'ProductCategories',
+            'Products',
+        ]);
+        $currentLanguage = $this->MultiLanguage->getCurrentLanguage();
+        $currentLanguageCode = $this->MultiLanguage->getCurrentLanguageCode();
+        $this->set('currentLanguageCode', $currentLanguageCode);
+        $menuTypeList = $this->ProductCategories->getTypeList();
+        $this->set('menuTypeList', $menuTypeList);
+        $categoryList = $this->ProductCategories->find('all', [
+                    'conditions' => [
+                        'ProductCategories.status' => ACTIVE,
+                    ],
+                    'contain' => [
+                        'Title' . ucfirst($currentLanguage),
+                    ],
+                    'order' => [
+                        'ProductCategories.display_order' => 'ASC',
+                    ],
+                ])->toArray();
+        foreach ($categoryList as $categoryInfo) {
+            $categoryInfo->productList = $this->Products->find('all', [
+                        'conditions' => [
+                            'Products.category_id' => $categoryInfo->id,
+                            'Products.status' => ACTIVE,
+                        ],
+                        'order' => [
+                            'Products.display_order' => 'ASC',
+                        ],
+                    ])->toArray();
+        }
+        $this->set('categoryList', $categoryList);
     }
 
     public function detail($slug, $languageCode = LANGUAGE_VIETNAMESE) {

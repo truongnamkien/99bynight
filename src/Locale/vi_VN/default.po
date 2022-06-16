@@ -889,8 +889,11 @@ msgstr "Giá"
 msgid "Products.category_id"
 msgstr "Thực đơn"
 
-msgid ""
-msgstr ""
+msgid "Menu type"
+msgstr "Loại menu"
+
+msgid "ProductCategories.menu_type"
+msgstr "Loại menu"
 
 msgid ""
 msgstr ""

@@ -11,7 +11,9 @@ use Cake\ORM\Entity;
 class ProductCategoriesController extends CrudController {
 
     protected $hasOrder = [
-        'filter' => []
+        'filter' => [
+            'menu_type',
+        ]
     ];
     protected $multiLangFields = [
         'title' => [
@@ -29,6 +31,9 @@ class ProductCategoriesController extends CrudController {
         ],
         'status' => [
             'label' => 'Status',
+        ],
+        'menu_type' => [
+            'label' => 'Menu type',
         ],
     ];
     protected $detailViewCols = [
@@ -60,6 +65,7 @@ class ProductCategoriesController extends CrudController {
         parent::initialize();
         $this->activationFields = [
             'ProductCategories.status' => $this->model->getStatusList(),
+            'ProductCategories.menu_type' => $this->model->getTypeList(),
         ];
     }
 

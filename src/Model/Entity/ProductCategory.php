@@ -7,6 +7,12 @@ use App\Utility\Utils;
 
 class ProductCategory extends Entity {
 
+    const TYPE_STARTER = 0;
+    const TYPE_MAIN_COURSE = 1;
+    const TYPE_DRINK = 2;
+    const TYPE_OTHER = 3;
+
+
     protected $_accessible = [
         '*' => true,
         'id' => false,
