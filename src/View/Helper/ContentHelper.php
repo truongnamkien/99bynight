@@ -66,15 +66,6 @@ class ContentHelper extends Helper {
                 case Config::CONFIG_KEY_SOCIAL_FACEBOOK;
                     $view->set('siteFacebook', $config->content);
                     break;
-                case Config::CONFIG_KEY_WORKING_MON_FRI;
-                    $view->set('workingMonFri', $config->content);
-                    break;
-                case Config::CONFIG_KEY_WORKING_SAT;
-                    $view->set('workingSat', $config->content);
-                    break;
-                case Config::CONFIG_KEY_WORKING_SUN;
-                    $view->set('workingSun', $config->content);
-                    break;
             }
         }
     }

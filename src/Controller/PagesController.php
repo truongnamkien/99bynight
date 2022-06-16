@@ -120,20 +120,8 @@ class PagesController extends AppController {
                 case Config::CONFIG_KEY_PHONE;
                     $this->set('sitePhone', $config->content);
                     break;
-                case Config::CONFIG_KEY_LOCATION;
-                    $this->set('siteLocation', json_decode($config->content, true));
-                    break;
                 case Config::CONFIG_KEY_SOCIAL_FACEBOOK;
                     $this->set('siteFacebook', $config->content);
-                    break;
-                case Config::CONFIG_KEY_WORKING_MON_FRI;
-                    $this->set('workingMonFri', $config->content);
-                    break;
-                case Config::CONFIG_KEY_WORKING_SAT;
-                    $this->set('workingSat', $config->content);
-                    break;
-                case Config::CONFIG_KEY_WORKING_SUN;
-                    $this->set('workingSun', $config->content);
                     break;
             }
         }

@@ -30,8 +30,5 @@ class Config extends Entity {
     const CONFIG_KEY_DESCRIPTION_VIETNAMESE = 7;
     const CONFIG_KEY_ADDRESS_VIETNAMESE = 8;
     const CONFIG_KEY_SOCIAL_FACEBOOK = 9;
-    const CONFIG_KEY_WORKING_MON_FRI = 10;
-    const CONFIG_KEY_WORKING_SAT = 11;
-    const CONFIG_KEY_WORKING_SUN = 12;
 
 }

@@ -47,29 +47,9 @@ class ConfigsController extends FsBackendController {
             'label' => 'Web Description',
             'currentValue' => false,
         ],
-        Config::CONFIG_KEY_WORKING_MON_FRI => [
-            'input' => 'textarea',
-            'label' => 'Working Time (Mon - Fri)',
-            'currentValue' => false,
-        ],
-        Config::CONFIG_KEY_WORKING_SAT => [
-            'input' => 'textarea',
-            'label' => 'Working Time (Sat)',
-            'currentValue' => false,
-        ],
-        Config::CONFIG_KEY_WORKING_SUN => [
-            'input' => 'textarea',
-            'label' => 'Working Time (Sun)',
-            'currentValue' => false,
-        ],
         Config::CONFIG_KEY_ADDRESS_VIETNAMESE => [
             'input' => 'text',
             'label' => 'Address',
-            'currentValue' => false,
-        ],
-        Config::CONFIG_KEY_LOCATION => [
-            'input' => 'google-map',
-            'label' => 'Google Map Location',
             'currentValue' => false,
         ],
     ];
@@ -87,9 +67,6 @@ class ConfigsController extends FsBackendController {
         foreach ($configList as $configInfo) {
             if (isset($inputList[$configInfo->field])) {
                 $inputList[$configInfo->field]['currentValue'] = $configInfo->content;
-            }
-            if ($configInfo->field == Config::CONFIG_KEY_LOCATION) {
-                $inputList[$configInfo->field]['currentValue'] = json_decode($configInfo->content, true);
             }
         }
         $this->set('inputList', $inputList);
