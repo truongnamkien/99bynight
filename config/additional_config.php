@@ -10,6 +10,7 @@ return [
     ],
     'LanguageList' => [
         LANGUAGE_VIETNAMESE => 'Vietnamese',
+        LANGUAGE_ENGLISH => 'English',
     ],
     'LocaleList' => [
         LANGUAGE_VIETNAMESE => 'vi_VN',

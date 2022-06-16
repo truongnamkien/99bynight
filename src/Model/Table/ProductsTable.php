@@ -47,9 +47,11 @@ class ProductsTable extends Table {
 
     public function validationDefault(Validator $validator) {
         $validator->integer('id')->allowEmpty('id', 'create');
-        $validator->integer('category_id')
-                ->notEmpty('category_id')
-                ->requirePresence('category_id');
+        $validator->integer('category_id', sprintf(__('Please select %s!'), __('Product Category')))
+                ->notEmpty('category_id', sprintf(__('Please select %s!'), __('Product Category')));
+        $validator->integer('price', sprintf(__('Please input %s!'), __('Price')))
+                ->requirePresence('price', true, sprintf(__('Please input %s!'), __('Price')))
+                ->allowEmpty('price');
         return $validator;
     }
 

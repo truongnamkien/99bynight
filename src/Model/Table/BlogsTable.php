@@ -64,10 +64,10 @@ class BlogsTable extends Table {
 
     public function validationDefault(Validator $validator) {
         $validator->integer('id')->allowEmpty('id', 'create');
-        $validator->integer('category_id')
-                ->notEmpty('category_id')
-                ->requirePresence('category_id');
-        $validator->notEmpty('published_date');
+        $validator->requirePresence('category_id', 'create', sprintf(__('Please select %s!'), __('Blog Category')))
+                ->notEmpty('category_id', sprintf(__('Please select %s!'), __('Blog Category')));
+        $validator->requirePresence('published_date', 'create', sprintf(__('Please input %s!'), __('Publish Date')))
+                ->notEmpty('published_date', sprintf(__('Please input %s!'), __('Publish Date')));
         return $validator;
     }
 

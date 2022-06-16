@@ -12,7 +12,7 @@
                         <?php if (!empty($searchingFields)): ?>
                             <div class="form-group">
                                 <label class="form-control-label" for="filter_keyword"><?php echo __('Keyword'); ?></label>
-                                <input autocomplete="off" class="form-control filter-input" id="filter_keyword" name="keyword" placeholder="<?php echo __('Keyword'); ?>" type="text">
+                                <input autocomplete="off" class="form-control filter-input" id="filter_keyword" name="filter_keyword" placeholder="<?php echo __('Keyword'); ?>" type="text">
                             </div>
                         <?php endif; ?>
                         <?php foreach ($filterFields as $field => $fieldInfo): ?>

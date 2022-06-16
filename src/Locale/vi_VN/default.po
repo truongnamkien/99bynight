@@ -841,6 +841,9 @@ msgstr "Thực đơn"
 msgid "Product Categories"
 msgstr "Thực đơn"
 
+msgid "Product Category"
+msgstr "Thực đơn"
+
 msgid "Products"
 msgstr "Món ăn"
 
@@ -880,11 +883,11 @@ msgstr "Trạng thái"
 msgid "Products.status"
 msgstr "Trạng thái"
 
-msgid ""
-msgstr ""
+msgid "Price"
+msgstr "Giá"
 
-msgid ""
-msgstr ""
+msgid "Products.category_id"
+msgstr "Thực đơn"
 
 msgid ""
 msgstr ""

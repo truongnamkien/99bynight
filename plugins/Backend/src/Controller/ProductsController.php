@@ -57,9 +57,16 @@ class ProductsController extends CrudController {
             'label' => 'Product Category',
             'currentValue' => false,
         ],
+        'price' => [
+            'input' => 'suffix',
+            'type' => 'number',
+            'label' => 'Price',
+            'extra' => '.000 VNĐ',
+            'currentValue' => false,
+        ],
     ];
     protected $defaultSorting = [
-        'field' => 'ProductTitle%upperLanguageLabel%.content',
+        'field' => 'CategoryTitle%upperLanguageLabel%.content',
         'order' => 'ASC',
     ];
     protected $modelName = 'Products';
@@ -76,8 +83,24 @@ class ProductsController extends CrudController {
 
     public function initialize() {
         parent::initialize();
+        Utils::useTables($this, ['App.ProductCategories']);
+        $categoryList = $this->ProductCategories->find('all', [
+                    'contain' => [
+                        'Title' . ucfirst($this->currentLanguage),
+                    ],
+                    'order' => [
+                        'Title' . ucfirst($this->currentLanguage) . '.content' => 'ASC',
+                    ],
+                ])->toArray();
+        $categoryDropdown = [];
+        foreach ($categoryList as $category) {
+            $categoryDropdown[$category->id] = [
+                'label' => $category->getTitle(),
+            ];
+        }
         $this->activationFields = [
             'Products.status' => $this->model->getStatusList(),
+            'Products.category_id' => $categoryDropdown,
         ];
     }
 
