@@ -70,7 +70,39 @@
             </div>
         </div>
         <div class="container">
-            <h2><?php echo __('Page Not Found!'); ?></h2>
+            <header id="header">
+                <nav class="navbar">
+                    <div class="menu-wrapper">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="<?php echo $this->Link->homeUrl(); ?>">
+                                <?php echo $this->Html->image('logo.png'); ?>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section class="main-content">
+                <div class="isotope-filter" id="isotope-filter">
+                    <div class="element element-intro home menu-type-<?php echo implode(' menu-type-', array_keys($menuTypeList)); ?>" id="element-intro">
+                        <div class="element-wrapper">
+                            <!-- Intro- Element content -->
+                            <div class="intro-item" id="intro-item1" style="background-image: url('<?php echo $this->Url->build('/html/img/intro2.jpg', true); ?>');">
+                                <div class="intro-item-mask">
+                                    <div class="intro-item-content">
+                                        <h2 class="intro-item-title"><strong><?php echo PAGE_TITLE; ?></strong></h2>
+                                        <div class="intro-item-bar"></div>
+                                        <p class="intro-item-title2"><?php echo __('Page Not Found!'); ?></p>
+                                        <div class="intro-item-buttons">
+                                            <a href="<?php echo $this->Link->homeUrl(); ?>" class="btn btn-default btn-rayen intro-btn-left isotope-link" data-text="<?php echo __('Back to Home'); ?>"><span><?php echo __('Back to Home'); ?></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
         <?= $this->Minify->script('html/vendor/jquery') ?>
         <?= $this->Minify->script('html/vendor/bootstrap/js/bootstrap') ?>
