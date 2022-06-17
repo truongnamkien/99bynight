@@ -41,7 +41,7 @@
         </div>
         <?php foreach ($categoryList as $index => $categoryInfo): ?>
             <?php if (!empty($categoryInfo->productList)): ?>
-                <div class="element element-menu-list <?php echo $index == 0 ? 'home' : ''; ?> menu-type-<?php echo $categoryInfo->menu_type; ?>">
+                <div class="element element-menu-list home menu-type-<?php echo $categoryInfo->menu_type; ?>">
                     <div class="element-wrapper">
                         <h2 class="element-big-content-title"><strong><?php echo $categoryInfo->getTitle(); ?></strong></h2>
                         <ul class="restaurant-menu-list">
