@@ -155,7 +155,7 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.7;
-  font-family: "Poppins", Helvetica, sans-serif;
+  font-family: 'Playfair Display',serif;
   color: #444;
 }
 
@@ -3953,7 +3953,7 @@ footer .copy {
 /*-------- 3.9 404 Error page --------*/
 #error_page {
   width: 100%;
-  height: 680px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

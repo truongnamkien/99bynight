@@ -38,7 +38,8 @@
         <?= $this->Minify->css('css/default') ?>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lora:italic' rel='stylesheet' type='text/css'>
         <?= $this->Minify->css('html/css/vendors') ?>
         <?= $this->Minify->css('html/css/style') ?>
         <?= $this->Minify->css('html/css/custom') ?>
@@ -57,8 +58,6 @@
             <?= $this->fetch('content')?>
         </main>
         <?php echo $this->Content->pageFooter((!empty($currentPage) ? $currentPage : false)); ?>
-        <?php echo $this->element('alert_modal'); ?>
-
         <?= $this->Minify->script('html/js/common_scripts') ?>
         <?= $this->Minify->script('html/js/common_func') ?>
         <?= $this->Minify->script('js/async_request', true) ?>
