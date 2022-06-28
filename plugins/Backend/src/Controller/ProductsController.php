@@ -28,6 +28,15 @@ class ProductsController extends CrudController {
             'label' => 'Description',
         ],
     ];
+    protected $singlePhotos = [
+        'thumbnail' => [
+            'label' => 'Thumbnail',
+            'isRequired' => false,
+            'fixRatio' => false,
+            'width' => 400,
+            'height' => 400,
+        ],
+    ];
     protected $listViewCols = [
         'product_title_%languageLabel%.content' => [
             'filter' => 'ProductTitle%upperLanguageLabel%.content',

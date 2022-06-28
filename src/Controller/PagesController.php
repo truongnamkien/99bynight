@@ -172,30 +172,36 @@ class PagesController extends AppController {
         $currentLanguageCode = $this->MultiLanguage->getCurrentLanguageCode();
         $this->set('currentLanguageCode', $currentLanguageCode);
         $menuTypeList = $this->ProductCategories->getTypeList();
-        $this->set('menuTypeList', $menuTypeList);
-        $categoryList = $this->ProductCategories->find('all', [
-                    'conditions' => [
-                        'ProductCategories.status' => ACTIVE,
-                    ],
-                    'contain' => [
-                        'Title' . ucfirst($currentLanguage),
-                    ],
-                    'order' => [
-                        'ProductCategories.display_order' => 'ASC',
-                    ],
-                ])->toArray();
-        foreach ($categoryList as $categoryInfo) {
-            $categoryInfo->productList = $this->Products->find('all', [
+        foreach ($menuTypeList as $menuValue => $menuOption) {
+            $categoryList = $this->ProductCategories->find('all', [
                         'conditions' => [
-                            'Products.category_id' => $categoryInfo->id,
-                            'Products.status' => ACTIVE,
+                            'ProductCategories.status' => ACTIVE,
+                            'ProductCategories.menu_type' => $menuValue,
+                        ],
+                        'contain' => [
+                            'Title' . ucfirst($currentLanguage),
                         ],
                         'order' => [
-                            'Products.display_order' => 'ASC',
+                            'ProductCategories.display_order' => 'ASC',
                         ],
                     ])->toArray();
+            foreach ($categoryList as $categoryInfo) {
+                $categoryInfo->productList = $this->Products->find('all', [
+                            'conditions' => [
+                                'Products.category_id' => $categoryInfo->id,
+                                'Products.status' => ACTIVE,
+                            ],
+                            'order' => [
+                                'Products.display_order' => 'ASC',
+                            ],
+                        ])->toArray();
+            }
+            $menuTypeList[$menuValue]['categoriesList'] = $categoryList;
         }
-        $this->set('categoryList', $categoryList);
+        $this->set('menuTypeList', $menuTypeList);
+        $languageList = Configure::read('LanguageList');
+        unset($languageList[$currentLanguageCode]);
+        $this->set('languageList', $languageList);
     }
 
     public function detail($slug, $languageCode = LANGUAGE_VIETNAMESE) {

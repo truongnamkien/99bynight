@@ -11,6 +11,7 @@ return [
     'LanguageList' => [
         LANGUAGE_VIETNAMESE => 'Vietnamese',
         LANGUAGE_ENGLISH => 'English',
+        LANGUAGE_CHINESE => 'Chinese',
     ],
     'LocaleList' => [
         LANGUAGE_VIETNAMESE => 'vi_VN',

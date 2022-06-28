@@ -73,4 +73,24 @@ class Product extends Entity {
         return '';
     }
 
+    public function getThumbnail() {
+        $photoField = 'thumbnail';
+        if (empty($this->$photoField)) {
+            Utils::useTables($this, ['Backend.Photos']);
+            $this->$photoField = $this->Photos->find('all', [
+                        'conditions' => [
+                            'target_id' => $this->id,
+                            'target_type' => 'Products',
+                            'field' => 'thumbnail',
+                        ],
+                    ])->first();
+        }
+        unset($this->MultiLanguage);
+        unset($this->LanguageContents);
+        if (!empty($this->$photoField)) {
+            return $this->$photoField->path;
+        }
+        return '';
+    }
+
 }

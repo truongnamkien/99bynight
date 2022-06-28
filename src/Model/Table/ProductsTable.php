@@ -52,6 +52,14 @@ class ProductsTable extends Table {
                 ]
             ]);
         }
+        $this->hasOne('Thumbnails', [
+            'className' => 'Backend.Photos',
+            'foreignKey' => 'target_id',
+            'conditions' => [
+                'Thumbnails.target_type' => 'Products',
+                'Thumbnails.field' => 'thumbnail',
+            ]
+        ]);
     }
 
     public function validationDefault(Validator $validator) {

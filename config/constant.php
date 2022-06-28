@@ -7,5 +7,6 @@ define('ATTEMPT_LOGIN_TIME', 5);
 define('ROLE_SUPER_ADMIN', 'Super Admin');
 define('LANGUAGE_VIETNAMESE', 0);
 define('LANGUAGE_ENGLISH', 1);
+define('LANGUAGE_CHINESE', 2);
 define('PAGE_TITLE', '99 By Night');
 define('BLOG_PER_PAGE', 9);

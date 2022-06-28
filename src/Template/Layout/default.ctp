@@ -36,14 +36,12 @@
         <link rel="shortcut icon" href="<?= $favicon; ?>" type="image/x-icon" />
 
         <?= $this->Minify->css('css/default') ?>
-        <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <?= $this->Minify->css('html/vendor/bootstrap/css/bootstrap') ?>
-        <?= $this->Minify->css('html/vendor/font-awesome/css/font-awesome') ?>
-        <?= $this->Minify->css('html/vendor/animate') ?>
-        <?= $this->Minify->css('html/vendor/nivo-lightbox/nivo-lightbox') ?>
-        <?= $this->Minify->css('html/vendor/nivo-lightbox/themes/default/default') ?>
-        <?= $this->Minify->css('html/css/styles') ?>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <?= $this->Minify->css('html/css/vendors') ?>
+        <?= $this->Minify->css('html/css/style') ?>
+        <?= $this->Minify->css('html/css/custom') ?>
         <?= $this->Minify->fetchCss() ?>
         <script type="text/javascript">
             var contextUrl = '<?php echo $this->Url->build('/', true); ?>';
@@ -52,45 +50,17 @@
         </script>
     </head>
     <body class="">
-        <div class="loader-container" id="page-loader">
-            <div class="loading-wrapper loading-wrapper-hide">
-                <div class="loader-animation" id="loader-animation">
-                    <div class="sk-folding-cube">
-                        <div class="sk-cube1 sk-cube"></div>
-                        <div class="sk-cube2 sk-cube"></div>
-                        <div class="sk-cube4 sk-cube"></div>
-                        <div class="sk-cube3 sk-cube"></div>
-                    </div>
-                </div>
-                <!-- Edit With Your Name -->
-                <div class="loader-name" id="loader-name">
-                    <?php echo $this->Html->image('logo.png'); ?>
-                </div>
-                <!-- /Edit With Your Name -->
-            </div>
-        </div>
-        <div class="container">
+	<div id="preloader">
+            <div data-loader="circle-side"></div>
+	</div>
+        <main>
             <?= $this->fetch('content')?>
-        </div>
+        </main>
         <?php echo $this->Content->pageFooter((!empty($currentPage) ? $currentPage : false)); ?>
         <?php echo $this->element('alert_modal'); ?>
 
-        <?= $this->Minify->script('html/vendor/jquery') ?>
-        <?= $this->Minify->script('html/vendor/bootstrap/js/bootstrap') ?>
-        <?= $this->Minify->script('html/vendor/validate') ?>
-        <?= $this->Minify->script('html/vendor/nivo-lightbox/nivo-lightbox') ?>
-        <?= $this->Minify->script('html/vendor/jquery.nicescroll') ?>
-        <?= $this->Minify->script('html/vendor/jquery.nicescroll.plus') ?>
-        <?= $this->Minify->script('html/vendor/jquery.countdown') ?>
-        <?= $this->Minify->script('html/vendor/imagesloaded.pkgd') ?>
-        <?= $this->Minify->script('html/vendor/masonry.pkgd') ?>
-        <?= $this->Minify->script('html/vendor/jquery.ba-bbq') ?>
-        <?= $this->Minify->script('html/vendor/jquery.isotope2') ?>
-        <?= $this->Minify->script('html/vendor/packery-mode.pkgd') ?>
-        <?= $this->Minify->script('html/vendor/cross-browser') ?>
-        <?= $this->Minify->script('html/vendor/doubletaptogo') ?>
-        <?= $this->Minify->script('html/vendor/cross-browser') ?>
-        <?= $this->Minify->script('html/js/main') ?>
+        <?= $this->Minify->script('html/js/common_scripts') ?>
+        <?= $this->Minify->script('html/js/common_func') ?>
         <?= $this->Minify->script('js/async_request', true) ?>
         <?= $this->Minify->script('js/common', true) ?>
         <?= $this->Minify->fetchJs() ?>
