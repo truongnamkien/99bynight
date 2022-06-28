@@ -19,30 +19,28 @@
             <ul class="nav nav-tabs" role="tablist">
                 <?php $index = 0; ?>
                 <?php foreach ($menuTypeList as $menuValue => $menuOption): ?>
-                    <li class="nav-item">
-                        <a id="menu-tab<?php echo $menuValue; ?>" href="#pane-<?php echo $menuValue; ?>" class="nav-link <?php echo ($index == 0 ? 'active' : ''); ?>" data-bs-toggle="tab" role="tab"><?php echo $menuOption['label']; ?></a>
-                    </li>
-                    <?php $index++; ?>
+                    <?php foreach ($menuOption['categoriesList'] as $categoryInfo): ?>
+                        <li class="nav-item">
+                            <a id="menu-tab<?php echo $categoryInfo->id; ?>" href="#pane-<?php echo $categoryInfo->id; ?>" class="nav-link <?php echo ($index == 0 ? 'active' : ''); ?>" data-bs-toggle="tab" role="tab"><?php echo $categoryInfo->getTitle(); ?></a>
+                        </li>
+                        <?php $index++; ?>
+                    <?php endforeach; ?>
                 <?php endforeach; ?>
             </ul>
             <div class="tab-content add_bottom_25" role="tablist">
                 <?php $index = 0; ?>
                 <?php foreach ($menuTypeList as $menuValue => $menuOption): ?>
-                    <div id="pane-<?php echo $menuValue; ?>" class="card tab-pane fade <?php echo ($index == 0 ? 'show active' : ''); ?>" role="tabpanel" aria-labelledby="menu-tab<?php echo $menuValue; ?>">
-                        <div class="card-header" role="tab" id="heading-<?php echo $menuValue; ?>">
-                            <h5>
-                                <a class="collapsed" data-bs-toggle="collapse" href="#collapse-<?php echo $menuValue; ?>" aria-expanded="<?php echo ($index == 0 ? 'true' : 'false'); ?>" aria-controls="collapse-<?php echo $menuValue; ?>">
-                                    <?php echo $menuOption['label']; ?>
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapse-<?php echo $menuValue; ?>" class="collapse" role="tabpanel" aria-labelledby="heading-A">
-                            <div class="card-body">
-                                <?php foreach ($menuOption['categoriesList'] as $index => $categoryInfo): ?>
-                                    <div class="main_title center">
-                                        <span><em></em></span>
-                                        <h2><?php echo $categoryInfo->getTitle(); ?></h2>
-                                    </div>
+                    <?php foreach ($menuOption['categoriesList'] as $categoryInfo): ?>
+                        <div id="pane-<?php echo $categoryInfo->id; ?>" class="card tab-pane fade <?php echo ($index == 0 ? 'show active' : ''); ?>" role="tabpanel" aria-labelledby="menu-tab<?php echo $categoryInfo->id; ?>">
+                            <div class="card-header" role="tab" id="heading-<?php echo $categoryInfo->id; ?>">
+                                <h5>
+                                    <a class="collapsed" data-bs-toggle="collapse" href="#collapse-<?php echo $categoryInfo->id; ?>" aria-expanded="<?php echo ($index == 0 ? 'true' : 'false'); ?>" aria-controls="collapse-<?php echo $categoryInfo->id; ?>">
+                                        <?php echo $categoryInfo->getTitle(); ?>
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapse-<?php echo $categoryInfo->id; ?>" class="collapse" role="tabpanel" aria-labelledby="heading-A">
+                                <div class="card-body">
                                     <?php if (!empty($categoryInfo->productList)): ?>
                                         <div class="row add_bottom_25 magnific-gallery">
                                             <?php foreach ($categoryInfo->productList as $productInfo): ?>
@@ -70,11 +68,11 @@
                                             <?php endforeach; ?>
                                         </div>
                                     <?php endif; ?>
-                                <?php endforeach; ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?php $index++; ?>
+                        <?php $index++; ?>
+                    <?php endforeach; ?>
                 <?php endforeach; ?>
             </div>
         </div>
