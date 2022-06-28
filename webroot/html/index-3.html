@@ -33,13 +33,12 @@
 </head>
 
 <body>
-
+	
 	<div id="preloader">
 		<div data-loader="circle-side"></div>
 	</div><!-- /Page Preload -->
-				
+	
 	<header class="header clearfix element_to_stick">
-		<div class="layer"></div><!-- Opacity Mask Menu Mobile -->
 		<div class="container-fluid">
 		<div id="logo">
 			<a href="index.html">
@@ -158,66 +157,23 @@
 	<!-- /header -->
 	
 	<main>
-		<div id="carousel-home">
-			<div class="owl-carousel owl-theme">
-				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_1.jpg)">
-					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-						<div class="container">
-							<div class="row justify-content-center justify-content-md-end">
-								<div class="col-lg-6 static">
-									<div class="slide-text text-end white">
-										<h2 class="owl-slide-animated owl-slide-title">Taste<br>unique food</h2>
-										<p class="owl-slide-animated owl-slide-subtitle">
-											Cooking delicious food since 2005
-										</p>
-										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1 btn_scroll" href="menu-1.html" role="button">Read more</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--/owl-slide-->
-				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_2.jpg)">
-					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-						<div class="container">
-							<div class="row justify-content-center justify-content-md-start">
-								<div class="col-lg-6 static">
-									<div class="slide-text white">
-										<h2 class="owl-slide-animated owl-slide-title">Reserve<br>a Table Now</h2>
-										<p class="owl-slide-animated owl-slide-subtitle">
-											Cooking delicious food since 2005
-										</p>
-										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="reservations.html" role="button">Read more</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--/owl-slide-->				
-				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_3.jpg)">
-					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">
-						<div class="container">
-							<div class="row justify-content-center justify-content-md-start">
-								<div class="col-lg-12 static">
-									<div class="slide-text text-center white">
-										<h2 class="owl-slide-animated owl-slide-title">Enjoy<br>a friends dinner</h2>
-										<p class="owl-slide-animated owl-slide-subtitle">
-											Cooking delicious food since 2005
-										</p>
-										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="menu-1.html" role="button">Read more</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/owl-slide-->
-				</div>
-			</div>
-			<div id="icon_drag_mobile"></div>
+		<div class="header-video">
+		    <div id="hero_video">
+		        <div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+		            <div class="container">
+		                <div class="row justify-content-center text-center">
+		                    <div class="col-xl-8 col-lg-10 col-md-8 mt-2">
+		                        <h1>Taste Unique Food</h1>
+		                        <p>Delicious food since 2005</p>
+		                        <a class="btn_1" href="menu-1.html">Read more</a>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <img src="img/video_fix.png" alt="" class="header-video--media" data-video-src="video/intro" data-teaser-source="video/intro" data-provider="" data-video-width="1920" data-video-height="960">
 		</div>
-		<!--/carousel-->
+		<!-- /header-video -->
 
 		<ul id="banners_grid" class="clearfix">
 			<li>
@@ -249,7 +205,7 @@
 			</li>
 		</ul>
 		<!--/banners_grid -->
-
+		
 		<div class="pattern_2">
 		    <div class="container margin_120_100 home_intro">
 		        <div class="row justify-content-center d-flex align-items-center">
@@ -565,7 +521,7 @@
 		    </div>
 		    <!-- /container -->
 		</div>
-		<!-- /pattern_2 -->
+		<!-- /pattern_2 -->	
 	</main>
 	<!-- /main -->
 
@@ -653,12 +609,24 @@
 		<!-- /.modal-dialog -->
 	</div>
 	<!-- /.modal -->
-
+	
 	<!-- COMMON SCRIPTS -->
     <script src="js/common_scripts.min.js"></script>
-    <script src="js/slider.js"></script>
     <script src="js/common_func.js"></script>
     <script src="phpmailer/validate.js"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="js/modernizr.min.js"></script>
+    <script src="js/video_header.min.js"></script>
+    <script>
+		// Video Header
+		HeaderVideo.init({
+			container: $('.header-video'),
+			header: $('.header-video--media'),
+			videoTrigger: $("#video-trigger"),
+			autoPlayVideo: true
+		});
+	</script>
 
     <!-- SPECIFIC SCRIPTS (wizard form) -->
     <script src="js/wizard/wizard_scripts.min.js"></script>

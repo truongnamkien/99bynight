@@ -38,13 +38,12 @@
 		<div data-loader="circle-side"></div>
 	</div><!-- /Page Preload -->
 				
-	<header class="header clearfix element_to_stick">
+	<header class="header header_in is_sticky clearfix element_to_stick">
 		<div class="layer"></div><!-- Opacity Mask Menu Mobile -->
 		<div class="container-fluid">
 		<div id="logo">
 			<a href="index.html">
-				<img src="img/logo.svg" width="140" height="35" alt="" class="logo_normal">
-				<img src="img/logo_sticky.svg" width="140" height="35" alt="" class="logo_sticky">
+				<img src="img/logo_sticky.svg" width="140" height="35" alt="">
 			</a>
 		</div>
 		<ul id="top_menu">
@@ -158,19 +157,19 @@
 	<!-- /header -->
 	
 	<main>
-		<div id="carousel-home">
+		<div id="carousel-home-2">
 			<div class="owl-carousel owl-theme">
-				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_1.jpg)">
+				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_1_vertical.jpg)">
 					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
 						<div class="container">
-							<div class="row justify-content-center justify-content-md-end">
-								<div class="col-lg-6 static">
-									<div class="slide-text text-end white">
-										<h2 class="owl-slide-animated owl-slide-title">Taste<br>unique food</h2>
+							<div class="row justify-content-center justify-content-md-start">
+								<div class="col-lg-12 static">
+									<div class="slide-text text-center white">
+										<h2 class="owl-slide-animated owl-slide-title">Enjoy<br>unique food</h2>
 										<p class="owl-slide-animated owl-slide-subtitle">
-											Cooking delicious food since 2005
+											Delicious Food since 2005
 										</p>
-										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1 btn_scroll" href="menu-1.html" role="button">Read more</a></div>
+										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="menu-1.html" role="button">Read more</a></div>
 									</div>
 								</div>
 							</div>
@@ -178,17 +177,17 @@
 					</div>
 				</div>
 				<!--/owl-slide-->
-				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_2.jpg)">
+				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_2_vertical.jpg)">
 					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
 						<div class="container">
 							<div class="row justify-content-center justify-content-md-start">
-								<div class="col-lg-6 static">
-									<div class="slide-text white">
-										<h2 class="owl-slide-animated owl-slide-title">Reserve<br>a Table Now</h2>
+								<div class="col-lg-12 static">
+									<div class="slide-text text-center white">
+										<h2 class="owl-slide-animated owl-slide-title">Reserve<br>a Table</h2>
 										<p class="owl-slide-animated owl-slide-subtitle">
-											Cooking delicious food since 2005
+											Delicious Food since 2005
 										</p>
-										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="reservations.html" role="button">Read more</a></div>
+										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="menu-1.html" role="button">Read more</a></div>
 									</div>
 								</div>
 							</div>
@@ -196,7 +195,25 @@
 					</div>
 				</div>
 				<!--/owl-slide-->				
-				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_3.jpg)">
+				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_3_vertical.jpg)">
+					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">
+						<div class="container">
+							<div class="row justify-content-center justify-content-md-start">
+								<div class="col-lg-12 static">
+									<div class="slide-text text-center white">
+										<h2 class="owl-slide-animated owl-slide-title">Taste<br>new dishes</h2>
+										<p class="owl-slide-animated owl-slide-subtitle">
+											Delicious Food since 2005
+										</p>
+										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="menu-1.html" role="button">Read more</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/owl-slide-->
+				</div>
+				<div class="owl-slide cover lazy" data-bg="url(img/slides/slide_home_4_vertical.jpg)">
 					<div class="opacity-mask d-flex align-items-center" data-opacity-mask="rgba(0, 0, 0, 0.6)">
 						<div class="container">
 							<div class="row justify-content-center justify-content-md-start">
@@ -204,7 +221,7 @@
 									<div class="slide-text text-center white">
 										<h2 class="owl-slide-animated owl-slide-title">Enjoy<br>a friends dinner</h2>
 										<p class="owl-slide-animated owl-slide-subtitle">
-											Cooking delicious food since 2005
+											Delicious Food since 2005
 										</p>
 										<div class="owl-slide-animated owl-slide-cta"><a class="btn_1" href="menu-1.html" role="button">Read more</a></div>
 									</div>
@@ -216,39 +233,9 @@
 				</div>
 			</div>
 			<div id="icon_drag_mobile"></div>
+			<div class="frame white"></div>
 		</div>
 		<!--/carousel-->
-
-		<ul id="banners_grid" class="clearfix">
-			<li>
-				<a href="menu-1.html" class="img_container">
-					<img src="img/banners_cat_placeholder.jpg" data-src="img/banner_1.jpg" alt="" class="lazy">
-					<div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-						<h3>Our Menu</h3>
-						<p>View Our Specialites</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="order-food.html" class="img_container">
-					<img src="img/banners_cat_placeholder.jpg" data-src="img/banner_2.jpg" alt="" class="lazy">
-					<div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-						<h3>Delivery</h3>
-						<p>Home delivery or take away food</p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="gallery.html" class="img_container">
-					<img src="img/banners_cat_placeholder.jpg" data-src="img/banner_3.jpg" alt="" class="lazy">
-					<div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-						<h3>Inside Foores</h3>
-						<p>View the Gallery</p>
-					</div>
-				</a>
-			</li>
-		</ul>
-		<!--/banners_grid -->
 
 		<div class="pattern_2">
 		    <div class="container margin_120_100 home_intro">
@@ -656,7 +643,7 @@
 
 	<!-- COMMON SCRIPTS -->
     <script src="js/common_scripts.min.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/slider_2.js"></script>
     <script src="js/common_func.js"></script>
     <script src="phpmailer/validate.js"></script>
 
