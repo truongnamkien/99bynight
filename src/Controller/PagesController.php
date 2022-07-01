@@ -191,6 +191,10 @@ class PagesController extends AppController {
                                 'Products.category_id' => $categoryInfo->id,
                                 'Products.status' => ACTIVE,
                             ],
+                            'contain' => [
+                                'Title' . ucfirst($currentLanguage),
+                                'Thumbnails',
+                            ],
                             'order' => [
                                 'Products.display_order' => 'ASC',
                             ],

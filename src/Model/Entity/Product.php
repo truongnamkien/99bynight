@@ -85,8 +85,7 @@ class Product extends Entity {
                         ],
                     ])->first();
         }
-        unset($this->MultiLanguage);
-        unset($this->LanguageContents);
+        unset($this->Photos);
         if (!empty($this->$photoField)) {
             return $this->$photoField->path;
         }
